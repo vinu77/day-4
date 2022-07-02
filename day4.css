@@ -1,0 +1,96 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#day4
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#day4 > article
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    background-color: rgba(216, 74, 74, 0.767);   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#day4 > article :is(.disc,.disc1,.disc2,.disc3)
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #day4 > article :is(.disc1,.disc2,.disc3)
+{
+    width: 20;
+    height: 20;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* #day4 > article:hover .disc1
+{
+    transition: .5s;
+    width: 80px;
+    height: 80px;
+} */
+/* #day4 > article:hover .disc2
+{
+    transition: 1s;
+    width: 55px;
+    height: 55px;
+} */
+/* #day4 > article:hover .disc3
+{
+    transition: 1.5s;
+    width: 20px;
+    height:20px;
+} */
+#day4 > article :is(.disc1,.disc2,.disc3)
+{
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 100%;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#day4 > article .disc1
+{
+    animation-name: disc1;
+}
+#day4 > article .disc2
+{
+    animation-name: disc2;
+}
+#day4 > article .disc3
+{
+    animation-name: disc3;
+}
+@keyframes disc1{
+    0%   {width: 0px; height: 0px;}
+    100% {width: 80px; height: 80px;}
+}
+@keyframes disc2{
+    0%   {width: 0px; height: 0px;}
+    100% {width: 50px; height: 50px;}
+}
+@keyframes disc3{
+    0%   {width: 0px; height: 0px;}
+    100% {width: 20px; height: 20px;}
+}
